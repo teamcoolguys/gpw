@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class card : MonoBehaviour 
+public class Card : MonoBehaviour 
 {
 	public int AttackModifier;
 	public int DefenceModifier;
+	private GameObject Self;
 
-	public GameObject Card;
 	// Use this for initialization
 	void Start () 
 	{
