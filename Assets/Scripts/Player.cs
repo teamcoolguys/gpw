@@ -1,53 +1,76 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
-
-	private GameObject Hand;
+public class Player : MonoBehaviour
+{
+	//privates
+	private Hand Hand;
+	private GameObject Self;
+	private bool moveLimitReached;
+	private bool attackLimitReached;
+	//publics
+	public Deck mDeck;
 	public int mHealth;
 	public int mDefense;
 	public int mAttack;
-	public int mMovement;
+	public int mRunSpeed;
+	public int mSpeed;
+	public int mStealhSpeed;
 	public int mInfamy;
 	public int mRange;
 
-	private GameObject Self;
-
-	private GameObject Deck;	//needs to be made
 	enum PlayerModel
 	{
 		char1,
 		char2,
 		char3
 		//etc
-
 	}
+
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 	
 	}
 
-	void MovePhase() {
+	void MovePhase()
+	{
 		//Player Movement
+		moveLimitReached = true;
 	}
 
-	void AttackPhase() {
+	void AttackPhase()
+	{
 		//player attack
+		attackLimitReached = true;
 	}
 
-	void EndPhase() {
+	bool EndPhase()
+	{
 		//player end step
+		return true;
 	}
 
-	void UseCard() {
+	void UseCard()
+	{
 		// player uses card
 	}
 
-	void TakeDamage() {
-		//pkayer takes damage
+	void TakeDamage()
+	{
+		//player takes damage
 	}
+
 	// Update is called once per frame
-	void Update () {
-	
+	void PlayerTurn ()
+	{
+		if(!moveLimitReached)
+		{
+			MovePhase ();
+		}
+		if(!attackLimitReached)
+		{
+			AttackPhase();
+		}
 	}
 }
