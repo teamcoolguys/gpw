@@ -12,7 +12,7 @@ public class GameMenu : MonoBehaviour
 	
 	public readonly string SceneNameMenu = "DemoWorker-Scene";
 	
-	public string SceneNameGame = "DemoWorkerGame-Scene";
+	public string SceneNameGame;
 	
 	private string errorDialog;
 	private double timeToClearDialog;
@@ -51,6 +51,10 @@ public class GameMenu : MonoBehaviour
 		}
 
 		// if you wanted more debug out, turn this on:
+		if(SceneNameGame == "")
+		{
+			SceneNameGame = "DemoWorkerGame-Scene";
+		}
 		// PhotonNetwork.logLevel = NetworkLogLevel.Full;
 	}
 

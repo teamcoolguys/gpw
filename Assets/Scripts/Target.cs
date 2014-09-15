@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Target : MonoBehaviour {
+public class Target : MonoBehaviour 
+{
 
 	private GameObject Self;
 	public int mHealth;
@@ -12,31 +13,38 @@ public class Target : MonoBehaviour {
 	public int mSightRange;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 	
 	}
 
-	void Movement () {
+	void Movement ()
+	{
 		
 	}
 
-	void Attack () {
+	void Attack ()
+	{
 		
 	}
 
-	void Detect () {
+	void Detect ()
+	{
 		
 	}
 
-	void Flee () {
+	void Flee ()
+	{
 		
 	}
 
-	void CallReinforcements () {
+	void CallReinforcements ()
+	{
 		
 	}
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 	
 	}
 }

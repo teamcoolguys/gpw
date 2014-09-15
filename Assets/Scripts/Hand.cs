@@ -1,32 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Hand : MonoBehaviour {
-
+public class Hand : MonoBehaviour 
+{
 	private GameObject[] Cards;
 	private GameObject Self;
+	public readonly int numberofcards;
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
+		Cards.GetLength (5);
 	}
 
-	void BeginTurn () {
-		//Draw();
+	void addCard(GameObject card)
+	{
+		Cards.SetValue(card,numberofcards);
 	}
 
-	void Draw () {
-		//Draw card from deck
-	}
-
-	void Discard () {
-		//Discard a card for various reasons
-	}
-
-	void Showhand () {
+	void Showhand ()
+	{
 		//Display players hand
 	}
+
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+	{
 	
 	}
 }
