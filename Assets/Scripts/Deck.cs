@@ -6,10 +6,10 @@ using System.Collections;
 
 public class Deck : MonoBehaviour
 {
-	//publics
+	//privates
 	private int count;
 	
-	//privates
+	//publics
 	public GameObject[] mCards;
 
 	// Use this for initialization

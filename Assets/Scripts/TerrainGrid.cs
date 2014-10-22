@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameManager : MonoBehaviour 
+public class TerrainGrid : MonoBehaviour 
 {
-	public Player[] players;
+	//publics
+	public Space[] mSpacesGroundFloor; 
 
-
+	//privates
+	private int mSize;
 
 	// Use this for initialization
 	void Start () 
 	{
-		for(int i = 0; i < 4; i++)
+		mSize = 100;
+
+		for (int i = 0; i < mSize; ++i) 
 		{
 
 		}
@@ -19,6 +23,6 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-
+	
 	}
 }
