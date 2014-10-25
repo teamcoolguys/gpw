@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Map : MonoBehaviour {
 
-	public TerrainGrid mGrid;
-
+	//publics
+	public TerrainGrid mGroundFloor;
+	public TerrainGrid mSecondFloor;
 
 	// Use this for initialization
 	void Start () 

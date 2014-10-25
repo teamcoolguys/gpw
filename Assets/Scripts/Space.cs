@@ -10,17 +10,17 @@ public class Space : MonoBehaviour
 	private bool mFull = false;
 	public bool mShop = false;
 	
-	void MoveToSpace()
+	public void MoveToSpace() //indicates a unit has moved onto the space
 	{
 		mFull = true;
 	}
 
-	void LeaveSpace()
+	public void LeaveSpace() //indicates a unit has moved off of a space
 	{
 		mFull = false;
 	}
 
-	public bool IsFull()
+	public bool IsFull() //checks if space is currently filled
 	{
 		if (mFull == true) 
 		{
@@ -32,7 +32,7 @@ public class Space : MonoBehaviour
 		}
 	}
 
-	public bool IsShop()
+	public bool IsShop() // checks if space is a shop
 	{
 		if (mShop == true) 
 		{
@@ -42,5 +42,5 @@ public class Space : MonoBehaviour
 		{
 			return false;
 		}
-	}
+	}	
 }

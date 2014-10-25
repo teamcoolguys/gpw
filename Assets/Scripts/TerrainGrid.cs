@@ -4,22 +4,25 @@ using System.Collections;
 public class TerrainGrid : MonoBehaviour 
 {
 	//publics
-	public Space[] mSpacesGroundFloor; 
-	public Space[] mSpacesSecondFloor;
+	public Space[] mSpacesFloor; // array of spaces on current floor object
 
-	// Use this for initialization
-	void Start () 
+	public bool CheckIfShop(int ID)
 	{
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
+		return mSpacesFloor [ID].IsShop ();
 	}
 
-	public bool SpaceFull(int ID)
+	public bool SpaceFull(int ID) // digs into space (using ID), checks if full
 	{
-		return mSpacesGroundFloor[ID].IsFull ();
+		return mSpacesFloor[ID].IsFull ();
+	}
+
+	public void RemoveFromSpace(int ID) // removes marker for full space
+	{
+		mSpacesFloor [ID].LeaveSpace ();
+	}
+
+	public void EnterSpace(int ID) // turns on marker for full space
+	{
+		mSpacesFloor [ID].MoveToSpace ();
 	}
 }

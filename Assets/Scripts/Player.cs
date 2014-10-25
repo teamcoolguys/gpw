@@ -8,15 +8,19 @@ public class Player : MonoBehaviour
 	private GameObject Self;
 	private bool moveLimitReached;
 	private bool attackLimitReached;
+
 	//publics
 	public Deck mDeck;
+
 	public int mHealth;
 	public int mDefense;
 	public int mAttack;
 	public int mRunSpeed;
 	public int mSpeed;
 	public int mStealhSpeed;
-	public int mInfamy;
+
+	public int mInfamy;//
+
 	public int mRange;
 
 	enum PlayerModel
