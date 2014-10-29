@@ -1,11 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AI\BaseGuard.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerInteracts\Player.cs">
     <Files>
-      <File FileName="Assets\Scripts\Player.cs" Line="15" Column="1" />
-      <File FileName="Assets\Scripts\AI\BaseGuard.cs" Line="23" Column="27" />
-      <File FileName="Assets\Scripts\AI\BaseTarget.cs" Line="28" Column="3" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="13" Column="29" />
+      <File FileName="Assets\Scripts\MapScripts\Map.cs" Line="25" Column="43" />
+      <File FileName="Assets\Scripts\MapScripts\MoveScript.cs" Line="8" Column="1" />
+      <File FileName="Assets\Scripts\PlayerInteracts\Player.cs" Line="42" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

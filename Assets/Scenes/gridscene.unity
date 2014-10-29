@@ -4093,6 +4093,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mGroundFloor: {fileID: 1648046694}
   mSecondFloor: {fileID: 0}
+  player:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1084908213
 GameObject:
   m_ObjectHideFlags: 0
