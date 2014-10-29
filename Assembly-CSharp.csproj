@@ -136,26 +136,14 @@
      <Compile Include="Assets\Scripts\BackEnd\GameManager.cs" />
      <Compile Include="Assets\Scripts\BackEnd\GameMenu.cs" />
      <Compile Include="Assets\Scripts\BackEnd\NetworkCommands.cs" />
-     <Compile Include="Assets\Scripts\Deck.cs" />
-     <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\GameMenu.cs" />
-     <Compile Include="Assets\Scripts\Hand.cs" />
-     <Compile Include="Assets\Scripts\Map.cs" />
      <Compile Include="Assets\Scripts\MapScripts\Map.cs" />
      <Compile Include="Assets\Scripts\MapScripts\MoveScript.cs" />
      <Compile Include="Assets\Scripts\MapScripts\Space.cs" />
      <Compile Include="Assets\Scripts\MapScripts\TerrainGrid.cs" />
-     <Compile Include="Assets\Scripts\NetworkCommands.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerInteracts\Deck.cs" />
      <Compile Include="Assets\Scripts\PlayerInteracts\Hand.cs" />
      <Compile Include="Assets\Scripts\PlayerInteracts\Player.cs" />
-     <Compile Include="Assets\Scripts\PlayerInteracts\Target.cs" />
      <Compile Include="Assets\Scripts\PlayerInteracts\card.cs" />
-     <Compile Include="Assets\Scripts\Space.cs" />
-     <Compile Include="Assets\Scripts\Target.cs" />
-     <Compile Include="Assets\Scripts\TerrainGrid.cs" />
-     <Compile Include="Assets\Scripts\card.cs" />
      <None Include="Assets\Plugins\iOS\New Text Document.txt" />
      <None Include="Assets\Photon Unity Networking\Demos\MarcoPolo-Tutorial\marcopolo-readme.txt" />
      <None Include="Assets\Art\places.txt" />
@@ -167,7 +155,7 @@
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Photon3Unity3D">
- <HintPath>F:/1Gpw/Gpw2/branches/Development/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/312287/Desktop/New folder/branches/Development/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

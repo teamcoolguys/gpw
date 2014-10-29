@@ -11,14 +11,18 @@ using UnityEditor;
 
 public static class NetworkCommands
 {
-    public bool JoinLobby()
+    public static bool JoinLobby()
     {
-        PhotonNetwork.JoinLobby();
+        if(PhotonNetwork.JoinLobby())
+		{
+			return true;
+		}
+		return false;
     }
 
     public static bool Create(string ToBeCreated, Vector3 PositionCreated)
     {
-        if (NetworkInstantiate(ToBeCreated, PositionCreated, Quaternion.Identity(), 0))
+        if (NetworkInstantiate(ToBeCreated, PositionCreated, Quaternion.identity, 0))
         {
             return true;
         }
