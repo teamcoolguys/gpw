@@ -1,56 +1,68 @@
 ﻿//added functionality throughout the entire class
 //Wyatt
+//DID everything else
+//Logan
 
 using UnityEngine;
 using System.Collections;
 
 public class Deck : MonoBehaviour
 {
+	public int decksize = 30;
 	//privates
-	private int count;
-	
+	public Card[] deck; //DONT FUCKIN TOUCH
+	private int cardsused;
 	//publics
-	public GameObject[] mCards;
+	public Card[] discard; //DONT FUCKIN TOUCH
 
 	// Use this for initialization
 	void Start () 
 	{
-		count = 0;
+		discard = new Card[decksize];
+		deck = new Card[decksize];
+		for (int c = 0; c < decksize; c++)
+		deck [c] = new Card (1, 1);
 	}
 
-	void Shuffle ()
+	void Shuffle () //NEEDS WORK WITH DISCARD PILE #done
 	{
-		for(int i = 0; i < mCards.Length; ++i)
+		for (int i = 0; i < discard.Length; ++i) 
 		{
-			float random = Random.value % mCards.Length;
-			GameObject temp = mCards[(int)random];
-			mCards[(int)random] = mCards[i];
-			mCards[i] = temp;
+			deck[deck.Length] = discard[i];
+			discard[i] = null;
 		}
+
+		for(int i = 0; i < deck.Length; ++i)
+		{
+			int random = (int)(Random.value % deck.Length);
+			Card temp = deck[i];
+			deck[i] = deck[random];
+			deck[random] = temp;
+
+		}
+		cardsused = 0;
 	}
 
-	GameObject Draw()
+	Card Draw()
 	{
-		GameObject nextCard = null;
-		if(!this.isEmpty())
-		{
-			nextCard = mCards[count];
-			count++;
-		}
-		return nextCard;
+		if (cardsused == deck.Length)
+		Shuffle ();
+		// WES WAY  throw new UnityException ("NO CARDS LEFT IN DECK");
+		cardsused++;
+		return deck [cardsused - 1];
+
 	}
 
 	bool isEmpty()
 	{
-		return mCards.Length == 0;
+		if (cardsused == deck.Length)
+						return true;
+				else
+						return false;
 	}
 
-//	void Discard ()
-//	{
-//		//In case of deck discard 
-//		//damn designers not making up minds
-//	}
-//
+
+
 //	void Regain ()
 //	{
 //		//In case of regain discarded cards

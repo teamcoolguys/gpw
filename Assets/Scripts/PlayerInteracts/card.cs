@@ -5,9 +5,14 @@ public class Card : MonoBehaviour
 {
 	public int AttackModifier;
 	public int DefenceModifier;
-	public GameObject Self;
 
 	// Use this for initialization
+	public Card(int atk, int def)
+	{
+		AttackModifier = atk;
+		DefenceModifier = def;
+	}
+
 	void Start () 
 	{
 	
