@@ -3,18 +3,43 @@ using System.Collections;
 
 public class Hand : MonoBehaviour 
 {
-	private GameObject[] Cards;
-	private GameObject Self;
+	private ArrayList hand;
 	public readonly int numberofcards;
 	// Use this for initialization
-	void Start ()
+	public Hand()
 	{
-		Cards.GetLength (5);
+		hand = new ArrayList();
+	}
+	public void clear()
+	{
+		hand.Clear ();
 	}
 
-	void addCard(GameObject card)
+	void Start ()
 	{
-		Cards.SetValue(card,numberofcards);
+
+	}
+
+	void addCard(Card card)	// TO ADD CARDS CALL addcard(Draw());
+	{
+		if (card == null)
+		throw new UnityException ("Cannot add null card");
+		hand.Add(card);
+
+	}
+
+	void playCard(Card card)
+	{
+		Deck disc = GetComponent<Deck> ();
+		disc.discard [disc.discard.Length] = card;
+		hand.Remove(card);
+		//Do playcard stuff
+
+	}
+
+	int count()
+	{
+		return hand.Count;
 	}
 
 	void Showhand ()
