@@ -102,7 +102,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 31561310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 836bd3102c5c7284fb15bb95884c891d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d7f1cde5182dae4b86913574aa3e899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mHealth: 0
@@ -480,60 +480,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 135481189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30ef041144e031b438e03111ea55e478, type: 3}
+  m_Script: {fileID: 11500000, guid: 599fe16439b722d47a0946fb8d368043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mCards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  decksize: 30
+  deck: []
+  discard: []
 --- !u!4 &135481191
 Transform:
   m_ObjectHideFlags: 0
@@ -823,7 +775,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 168407275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cff78ea56835c954594e0277b7b3d8ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d6b873f4004dab40825748f077df2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &168407277
@@ -1954,6 +1906,10 @@ Prefab:
     - target: {fileID: 400000, guid: 1712232118e52ec459bf8335752d89dc, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1712232118e52ec459bf8335752d89dc, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1712232118e52ec459bf8335752d89dc, type: 2}
@@ -6643,6 +6599,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 310aa2c706de1174ea4164aa23e4646b, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 310aa2c706de1174ea4164aa23e4646b, type: 2}
   m_RootGameObject: {fileID: 168407275}
@@ -6676,18 +6636,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1490803991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63c7084ace919ca449461e5a4c75ea34, type: 3}
+  m_Script: {fileID: 11500000, guid: fb82bc9ab2ea4f3429efd5f3885e7fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mDeck: {fileID: 0}
-  mHealth: 1
-  mDefense: 1
-  mAttack: 1
+  Self: {fileID: 0}
+  mHealth: 0
+  mDefense: 0
+  mAttack: 0
   mRunSpeed: 0
   mSpeed: 0
   mStealhSpeed: 0
-  mInfamy: 1
-  mRange: 1
+  move: {fileID: 0}
+  mInfamy: 0
+  mRange: 0
 --- !u!23 &1490803993
 Renderer:
   m_ObjectHideFlags: 0

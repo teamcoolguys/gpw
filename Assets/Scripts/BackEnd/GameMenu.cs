@@ -115,7 +115,7 @@ public class GameMenu : MonoBehaviour
 		
 		if (GUILayout.Button("Create Room", GUILayout.Width(100)))
 		{
-			PhotonNetwork.CreateRoom(this.roomName, new RoomOptions() { maxPlayers = 10 }, null);
+			PhotonNetwork.CreateRoom(this.roomName, new RoomOptions() { maxPlayers = 4 }, null);
 		}
 		
 		GUILayout.EndHorizontal();
@@ -126,7 +126,7 @@ public class GameMenu : MonoBehaviour
 		//this.roomName = GUILayout.TextField(this.roomName);
 		if (GUILayout.Button("Join Room", GUILayout.Width(100)))
 		{
-			PhotonNetwork.JoinRoom(this.roomName);
+			NetworkCommands.JoinLobby(this.roomName);
 		}
 		
 		GUILayout.EndHorizontal();
@@ -152,7 +152,7 @@ public class GameMenu : MonoBehaviour
 		GUILayout.FlexibleSpace();
 		if (GUILayout.Button("Join Random", GUILayout.Width(100)))
 		{
-			PhotonNetwork.JoinRandomRoom();
+			NetworkCommands.JoinRandom();
 		}
 		
 		
@@ -176,7 +176,7 @@ public class GameMenu : MonoBehaviour
 				GUILayout.Label(roomInfo.name + " " + roomInfo.playerCount + "/" + roomInfo.maxPlayers);
 				if (GUILayout.Button("Join"))
 				{
-					PhotonNetwork.JoinRoom(roomInfo.name);
+					NetworkCommands.JoinLobby(roomInfo.name);
 				}
 				
 				GUILayout.EndHorizontal();

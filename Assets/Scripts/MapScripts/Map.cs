@@ -22,7 +22,7 @@ public class Map : MonoBehaviour {
 	{
 		if (Input.GetButton ("W")) 
 		{
-			player[currentPlayer].SetCurrentSpace ();
+			//player[currentPlayer].SetCurrentSpace ();
 		}
 
 		if (Input.GetMouseButton (0)) 

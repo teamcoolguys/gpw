@@ -1,4 +1,4 @@
-﻿//Created A class that houses all of the networking Commands
+//Created A class that houses all of the networking Commands
 //Wyatt
 
 using UnityEngine;
@@ -11,14 +11,45 @@ using UnityEditor;
 
 public static class NetworkCommands
 {
-    public static bool JoinLobby()
+	private static bool Authenticate()
+	{
+		bool rc = false;
+		Social.localUser.Authenticate (success => {	
+			if (success)
+			{
+				Debug.Log ("Authentication successful");
+				string userInfo = "Username: " + Social.localUser.userName + 
+					"\nUser ID: " + Social.localUser.id + 
+						"\nIsUnderage: " + Social.localUser.underage;
+				Debug.Log (userInfo);
+				rc = true;
+			}
+			else
+				Debug.Log ("Authentication failed");
+		});
+		return rc;
+	}
+    public static bool JoinLobby(string s)
     {
-        if(PhotonNetwork.JoinLobby())
+		bool rc = false;
+		if (Authenticate())
 		{
-			return true;
+        	PhotonNetwork.JoinRoom(s);
+			rc = true;
 		}
-		return false;
+		return rc;
     }
+
+	public static bool JoinRandom()
+	{
+		bool rc = false;
+		if (Authenticate())
+		{
+			PhotonNetwork.JoinRandomRoom();
+			rc = true;
+		}
+		return rc;
+	}
 
     public static bool Create(string ToBeCreated, Vector3 PositionCreated)
     {

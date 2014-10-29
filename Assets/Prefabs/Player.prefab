@@ -30,6 +30,7 @@ Transform:
   m_LocalScale: {x: .442234635, y: 1.75743902, z: .392694503}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!23 &2300000
 Renderer:
   m_ObjectHideFlags: 1
@@ -48,9 +49,8 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayer: 0
-  m_SortingOrder: 0
   m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &3300000
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -78,15 +78,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63c7084ace919ca449461e5a4c75ea34, type: 3}
+  m_Script: {fileID: 11500000, guid: fb82bc9ab2ea4f3429efd5f3885e7fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mHealth: 1
-  mDefense: 1
-  mAttack: 1
-  mMovement: 1
-  mInfamy: 1
-  mRange: 1
+  mDeck: {fileID: 0}
+  Self: {fileID: 0}
+  mHealth: 0
+  mDefense: 0
+  mAttack: 0
+  mRunSpeed: 0
+  mSpeed: 0
+  mStealhSpeed: 0
+  move: {fileID: 0}
+  mInfamy: 0
+  mRange: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

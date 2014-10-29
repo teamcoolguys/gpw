@@ -142,10 +142,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 324432315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de96afcaf7db73a448d73eef1a402efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 06fec816bfbc08c4f9ace6acd77cae32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNameGame: GamePlay
+  SceneNameGame: gridscene
 --- !u!4 &324432317
 Transform:
   m_ObjectHideFlags: 0
@@ -189,15 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c7084ace919ca449461e5a4c75ea34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mDeck: {fileID: 0}
-  mHealth: 1
-  mDefense: 1
-  mAttack: 1
-  mRunSpeed: 0
-  mSpeed: 0
-  mStealhSpeed: 0
-  mInfamy: 1
-  mRange: 1
 --- !u!23 &1269719450
 Renderer:
   m_ObjectHideFlags: 0

@@ -39,13 +39,13 @@ public class Player : MonoBehaviour
 
 	public void SetCurrentSpace(Space nextSpace)
 	{
-		move.MoveSpaces (nextSpace.transform.position);
+		move.MoveSpaces (nextSpace.transform/*.position*/);
 		currentSpace = nextSpace;
 	}
 
 	public Transform FindCurrentSpace()
 	{
-		return currentSpace.transform.position;
+		return currentSpace.transform/*.position*/;	
 	}
 
 
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
 
 	Transform returnPlayerPoint()
 	{
-		return Self.transform.position;
+		return Self.transform/*.position*/;
 	}
 
 	void AttackPhase()
