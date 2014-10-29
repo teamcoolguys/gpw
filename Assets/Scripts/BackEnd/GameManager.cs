@@ -1,24 +1,28 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 
-public class GameManager : MonoBehaviour 
+static public class GameManager
 {
-	public Player[] players;
+    //publics
+
+    //privates
 
 
+    // Use this for initialization
+    static void LobbyCreated()
+    {
 
-	// Use this for initialization
-	void Start () 
-	{
-		for(int i = 0; i < 4; i++)
-		{
+    }
 
-		}
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
+    // Update is called once per frame
+    static void GameLoop()
+    {
 
-	}
+    }
+
+    private static void PlayerTurn(Player p)
+    {
+
+    }
 }
