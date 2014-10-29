@@ -11,14 +11,16 @@ public class Player : MonoBehaviour
 
 	//publics
 	public Deck mDeck;
+
 	public GameObject Self;
+	
 	public int mHealth;
 	public int mDefense;
 	public int mAttack;
 	public int mRunSpeed;
 	public int mSpeed;
 	public int mStealhSpeed;
-	public MoveScript move;
+
 
 	public int mInfamy;//
 
@@ -39,18 +41,24 @@ public class Player : MonoBehaviour
 
 	public void SetCurrentSpace(Space nextSpace)
 	{
-		move.MoveSpaces (nextSpace.transform.position);
+		move.MoveSpaces (nextSpace.transform);
 		currentSpace = nextSpace;
 	}
 
 	public Transform FindCurrentSpace()
 	{
-		return currentSpace.transform.position;
+		return currentSpace.transform;
 	}
 
+	Transform returnPlayerPoint()
+	{
+		return Self.transform;
+	}
 
-
-
+	void MoveSpaces(Transform spaceTransform)
+	{
+		charModel.transform.position = spaceTransform.position;
+	}
 
 
 
@@ -96,10 +104,7 @@ public class Player : MonoBehaviour
 		moveLimitReached = true;
 	}
 
-	Transform returnPlayerPoint()
-	{
-		return Self.transform.position;
-	}
+
 
 	void AttackPhase()
 	{

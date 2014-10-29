@@ -6,7 +6,7 @@ public class Map : MonoBehaviour {
 	//publics
 	public TerrainGrid mGroundFloor;
 	public TerrainGrid mSecondFloor;
-	public Player[] player;
+	public GameObject[] player;
 
 	//privates
 	private int currentPlayer;
@@ -20,14 +20,20 @@ public class Map : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetButton ("W")) 
+		if (Input.GetMouseButtonDown (0)) 
 		{
-			player[currentPlayer].SetCurrentSpace ();
-		}
+			RaycastHit hitInfo = new RaycastHit();
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-		if (Input.GetMouseButton (0)) 
-		{
+			if(Physics.Raycast(ray, out hitInfo, 100))
+			{
+				Debug.Log(hitInfo.collider.name);
+				int nextSpace = int.Parse (hitInfo.collider.name);
 
+				Debug.Log(nextSpace);
+
+				player[currentPlayer].moveSpaces(nextSpace);
+			}
 		}
 	}
 }
